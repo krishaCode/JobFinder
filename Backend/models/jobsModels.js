@@ -11,4 +11,4 @@ const jobSchema = new Schema({
   phoneNo: { type: Number, required: true }
 });
 
-module.exports = mongoose.model('Job', jobSchema);
+module.exports = mongoose.model('Jobs', jobSchema);
