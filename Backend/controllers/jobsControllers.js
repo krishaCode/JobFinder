@@ -1,21 +1,22 @@
 // models file is `jobsModels.js` in /models
-const Jobs = require('../models/jobsModels');
+const Job = require('../models/jobsModels');
 
 const getAllJobs = async (req, res, next) => {
-let jobs;
-try {
-  jobs = await Job.find();
-} catch (err) {
-    console.log(err);
-}
+  console.log('DEBUG: GET /api/jobs called');
+  try {
+    const jobs = await Job.find();
+    console.log('DEBUG: Jobs.find() returned', Array.isArray(jobs) ? jobs.length : typeof jobs);
 
-if (!job) {
-  return res.status(404).json({ message: 'No jobs found' });
-}
+    // Return 200 and an empty array when no docs exist
+    if (!jobs || jobs.length === 0) {
+      return res.status(200).json({ jobs: [] });
+    }
 
-return res.status(200).json({ jobs });
+    return res.status(200).json({ jobs });
+  } catch (err) {
+    console.error('ERROR getting jobs:', err);
+    return res.status(500).json({ message: 'Internal server error' });
+  }
 };
 
-module.exports = {
-  getAllJobs
-};
+exports.getAllJobs = getAllJobs;
