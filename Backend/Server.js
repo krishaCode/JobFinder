@@ -14,7 +14,9 @@ app.use((req, res, next) => {
 });
 
 // Mount routes at /api/jobs (keep this as requested)
+app.use(express.json());
 app.use('/api/jobs', jobsRoutes);
+
 
 // Validate required env
 if (!process.env.MongoDB_URI) {
