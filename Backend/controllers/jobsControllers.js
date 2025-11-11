@@ -19,15 +19,12 @@ const getAllJobs = async (req, res, next) => {
   }
 };
 
-exports.getAllJobs = getAllJobs;
-
 // data Insert
- 
 const insertJob = async (req, res, next) => {
-  const { title, description, company, location, salary, postedDate, phoneNo  } = req.body;
+  const { title, description, company, location, salary, postedDate, phoneNo } = req.body;
 
   let newJob;
-  try{
+  try {
     newJob = new Job({
       title,
       description,
@@ -35,21 +32,36 @@ const insertJob = async (req, res, next) => {
       location,
       salary,
       postedDate,
-      phoneNo
+      phoneNo,
     });
     await newJob.save();
-  }catch(err){
+  } catch (err) {
     console.error('ERROR inserting job:', err);
     return res.status(500).json({ message: 'Internal server error' });
   }
 
-  //not insert jobs
-
-  if (!newJob){
-    return res.status(500).json({message: 'Unable to insert job'});
+  if (!newJob) {
+    return res.status(500).json({ message: 'Unable to insert job' });
   }
-  return res.status(201).json({job: newJob});
+  return res.status(201).json({ job: newJob });
 };
 
-exports.insertJob = insertJob;
+// Get job by ID
+const getByID = async (req, res, next) => {
+  const id = req.params.id;
+  let job;
+  try {
+    job = await Job.findById(id);
+  } catch (err) {
+    console.error('ERROR getting job by ID:', err);
+    return res.status(500).json({ message: 'Internal server error' });
+  }
+  if (!job) {
+    return res.status(404).json({ message: 'Job not found' });
+  }
+  return res.status(200).json({ job });
+};
+
 exports.getAllJobs = getAllJobs;
+exports.insertJob = insertJob;
+exports.getByID = getByID;
