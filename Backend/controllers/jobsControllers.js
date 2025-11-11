@@ -62,6 +62,40 @@ const getByID = async (req, res, next) => {
   return res.status(200).json({ job });
 };
 
+// Update job by ID
+const updateJobs = async (req, res, next) => {
+  const id = req.params.id;
+  const { title, description, company, location, salary, postedDate, phoneNo } = req.body;
+
+  let job;
+  try {
+    // findByIdAndUpdate with { new: true } returns the updated document
+    job = await Job.findByIdAndUpdate(
+      id,
+      {
+        title,
+        description,
+        company,
+        location,
+        salary,
+        postedDate,
+        phoneNo,
+      },
+      { new: true }
+    );
+  } catch (err) {
+    console.error('ERROR updating job by ID:', err);
+    return res.status(500).json({ message: 'Internal server error' });
+  }
+
+  if (!job) {
+    return res.status(404).json({ message: 'Unable to update job' });
+  }
+
+  return res.status(200).json({ job });
+};
+
 exports.getAllJobs = getAllJobs;
 exports.insertJob = insertJob;
 exports.getByID = getByID;
+exports.updateJobs = updateJobs;
