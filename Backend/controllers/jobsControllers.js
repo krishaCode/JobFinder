@@ -95,7 +95,29 @@ const updateJobs = async (req, res, next) => {
   return res.status(200).json({ job });
 };
 
+//delete job Details
+
+const deleteJob = async (req, res, next) => {
+const id = req.params.id;
+let job;
+
+try {
+  job = await Job.findByIdAndDelete(id);
+}
+catch (err) {
+  console.error('ERROR deleting job by ID:', err);
+}
+
+if (!job) {
+    return res.status(404).json({ message: 'Unable to delete job' });
+  }
+
+  return res.status(200).json({ job });
+}
+
+
 exports.getAllJobs = getAllJobs;
 exports.insertJob = insertJob;
 exports.getByID = getByID;
 exports.updateJobs = updateJobs;
+exports.deleteJob = deleteJob;
