@@ -1,0 +1,200 @@
+/* reset default */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --transparent: rgba(255, 255, 255, 0);
+  --transition-duration: 0.5s;
+  --red: #cc0f39;
+  --font-size-p: clamp(1rem, 1.2vw, 1.3rem);
+  --font-size-h2: clamp(1.5rem, (2vw + 1rem), 2rem);
+}
+
+/* *********************** */
+
+body {
+  min-height: 100vh;
+  font-family: lato;
+  font-size: var(--font-size-p);
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  color: var(--black-light);
+  margin-bottom: 1.5rem;
+  font-size: var(--font-size-h2);
+}
+.container {
+  width: clamp(230px, 80%, 920px);
+  /* border: solid red; */
+  flex-direction: column;
+}
+
+ul {
+  display: flex;
+  /* border: blue solid; */
+}
+
+li {
+  list-style: none;
+  margin: 1rem 0.3rem;
+  /* border: solid green; */
+  padding: 0.8rem 1.4rem;
+  position: relative;
+}
+
+/* Navbar specific overrides */
+.navbar {
+  width: 100%;
+  background: var(--transparent);
+  padding: 0.75rem 0;
+}
+
+.navbar .container {
+  flex-direction: row; /* place items horizontally */
+}
+
+.nav-list {
+  gap: 0.6rem;
+}
+
+.nav-list li {
+  margin: 0 0.6rem;
+}
+
+/* ********************************** */
+
+li:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: var(--red);
+  z-index: -1;
+  transform: scaleX(0);
+  transition: var(--transition-duration);
+}
+
+li:nth-child(1):hover::before {
+  transform: scaleX(1);
+  transition: var(--transition-duration);
+  will-change: transform;
+}
+
+/* ********************************** */
+
+li:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: var(--red);
+  z-index: -1;
+  transform: scaleX(0);
+  transition: var(--transition-duration);
+  transform-origin: left;
+}
+
+li:nth-child(2):hover::before {
+  transform: scaleX(1);
+  transition: var(--transition-duration);
+  will-change: transform;
+}
+
+/* ********************************** */
+
+li:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: var(--red);
+  z-index: -1;
+  transform: scaleX(0);
+  transition: var(--transition-duration);
+  transform-origin: left;
+}
+
+li:nth-child(3):hover::before {
+  transform: scaleX(1);
+  transition: var(--transition-duration);
+  will-change: transform;
+}
+
+li:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: var(--red);
+  z-index: -1;
+  transform: scaleX(0);
+  transition: var(--transition-duration);
+  transform-origin: right;
+}
+
+li:nth-child(3):hover::after {
+  transform: scaleX(1);
+  transition: var(--transition-duration);
+  will-change: transform;
+}
+
+/* ********************************** */
+
+li:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: 0;
+  background: var(--red);
+  z-index: -1;
+  transform: scaleX(0);
+  transition: var(--transition-duration);
+  transform-origin: right;
+}
+
+li:nth-child(4):hover::before {
+  transform: scaleX(1);
+  transition: var(--transition-duration);
+  will-change: transform;
+}
+
+li:nth-child(4)::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: var(--red);
+  z-index: -1;
+  transform: scaleX(0);
+  transition: var(--transition-duration);
+  transform-origin: left;
+}
+
+li:nth-child(4):hover::after {
+  transform: scaleX(1);
+  transition: var(--transition-duration);
+  will-change: transform;
+}

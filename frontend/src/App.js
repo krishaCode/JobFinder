@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Navbar from './Components/Navbar/Navbar';
+import axios from 'axios';
 
+const URL = "http://localhost:5000/jobs";
+
+const fetchHandler = async () => {
+  return await axios.get(URL).then((res) => res.data) ;
+} 
 function App() {
+const [jobs, setJobs] = useState();
+
+useEffect(() =>{
+  fetchHandler().then((data) => setJobs(data.jobs));
+},[])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <Navbar />
+  <h1>hi</h1>
     </div>
   );
 }
