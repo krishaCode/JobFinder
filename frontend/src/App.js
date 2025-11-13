@@ -1,23 +1,16 @@
-import { useEffect, useState } from 'react';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
-import axios from 'axios';
+import DisplayJobs from './Components/DisplayJobs/DisplayJobs';
+import { Routes, Route } from 'react-router-dom';
 
-const URL = "http://localhost:5000/jobs";
-
-const fetchHandler = async () => {
-  return await axios.get(URL).then((res) => res.data) ;
-} 
 function App() {
-const [jobs, setJobs] = useState();
-
-useEffect(() =>{
-  fetchHandler().then((data) => setJobs(data.jobs));
-},[])
   return (
     <div className="App">
-  <Navbar />
-  <h1>hi</h1>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<h1>hi</h1>} />
+        <Route path="/jobs" element={<DisplayJobs />} />
+      </Routes>
     </div>
   );
 }
