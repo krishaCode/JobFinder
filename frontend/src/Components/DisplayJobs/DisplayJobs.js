@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Navbar from '../Navbar/Navbar'
 import axios from 'axios'
 import Jobs from '../jobs/jobs'
+import { Link } from 'react-router-dom'
 
 const API_URL = 'http://localhost:5000/api/jobs'
 
@@ -38,14 +39,12 @@ function DisplayJobs() {
 
   if (loading) return (
     <>
-      <Navbar />
       <div>Loading jobs...</div>
     </>
   )
 
   if (error) return (
     <>
-      <Navbar />
       <div>Error: {error}</div>
     </>
   )
@@ -59,9 +58,12 @@ function DisplayJobs() {
         {jobs && jobs.map((job, i) => (
           <div key={job._id ?? i}>
             <Jobs job={job} />
+            <Link to={`/updateuser/${job._id ?? i}`}>update</Link>
+      <button>Delete</button>
           </div>
         ))}
       </div>
+      
     </>
   )
 }
