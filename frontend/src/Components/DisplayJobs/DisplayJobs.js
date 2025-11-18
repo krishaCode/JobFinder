@@ -57,9 +57,10 @@ function DisplayJobs() {
         )}
         {jobs && jobs.map((job, i) => (
           <div key={job._id ?? i}>
-            <Jobs job={job} />
-            <Link to={`/updateuser/${job._id ?? i}`}>update</Link>
-      <button>Delete</button>
+            <Jobs
+              job={job}
+              onDelete={(deletedId) => setJobs((prev) => prev.filter((j) => j._id !== deletedId))}
+            />
           </div>
         ))}
       </div>

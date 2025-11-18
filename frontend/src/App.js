@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<h1>hi</h1>} />
         <Route path="/jobs" element={<DisplayJobs />} />
         <Route path="/postjob" element={<PostJob />} />
-        <Route path="/updateuser/:id" element={<UpdateJobs />} />
+        <Route path="/updatejobs/:id" element={<UpdateJobs />} />
       </Routes>
     </div>
   );
