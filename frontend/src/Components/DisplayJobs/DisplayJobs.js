@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../Navbar/Navbar'
 import axios from 'axios'
-import Jobs from '../jobs/jobs'
+import Card from '../jobs/card'
 import { Link, useLocation } from 'react-router-dom'
 
 const API_URL = 'http://localhost:5000/api/jobs'
@@ -64,17 +64,28 @@ function DisplayJobs() {
   return (
     <>
       <div>
-        {(!jobs || jobs.length === 0) && (
-          <div>No jobs found</div>
-        )}
-        {jobs && jobs.map((job, i) => (
-          <div key={job._id ?? i}>
-            <Jobs
-              job={job}
-              onDelete={(deletedId) => setJobs((prev) => prev.filter((j) => j._id !== deletedId))}
-            />
+        <section className="advertisers-service-sec py-5">
+          <div className="container" style={{ minHeight: '60vh' }}>
+            <div className="row section-header text-center">
+              <div className="col">
+                <h2>Available Jobs</h2>
+              </div>
+            </div>
+
+            <div className="row mt-4 row-cols-1 row-cols-md-3 g-4 justify-content-center align-items-start">
+              {(!jobs || jobs.length === 0) && (
+                <div className="col-12 text-center">No jobs found</div>
+              )}
+              {jobs && jobs.map((job, i) => (
+                <Card
+                  key={job._id ?? i}
+                  job={job}
+                  onDelete={(deletedId) => setJobs((prev) => prev.filter((j) => j._id !== deletedId))}
+                />
+              ))}
+            </div>
           </div>
-        ))}
+        </section>
       </div>
       
     </>
