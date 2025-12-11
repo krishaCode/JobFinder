@@ -1,7 +1,9 @@
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import DisplayJobs from './Components/DisplayJobs/DisplayJobs';
+import DisplayWorkers from './Components/DisplayWorkers/displayWorkers';
 import PostJob from './Components/PostJob/PostJob';
+import PostWorkers from './Components/PostWorkers/PostWorkers';
 import UpdateJobs from './Components/UpdtaeJobs/UpdateJobs';
 import { Routes, Route } from 'react-router-dom';
 
@@ -12,7 +14,9 @@ function App() {
       <Routes>
         <Route path="/" element={<h1>hi</h1>} />
         <Route path="/jobs" element={<DisplayJobs />} />
+        <Route path="/workers" element={<DisplayWorkers />} />
         <Route path="/postjob" element={<PostJob />} />
+        <Route path="/postworkers" element={<PostWorkers />} />
         <Route path="/updatejobs/:id" element={<UpdateJobs />} />
       </Routes>
     </div>

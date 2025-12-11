@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../Navbar/Navbar'
 import axios from 'axios'
-import Card from '../workers/card'
+import Card from '../jobs/card'
 import { Link, useLocation } from 'react-router-dom'
 
 const API_URL = 'http://localhost:5000/api/workers'
@@ -23,8 +23,8 @@ function DisplayWorkers() {
     fetchHandler()
       .then((data) => {
         if (!mounted) return
-        // backend might return { jobs: [...] } or an array directly
-        const list = data?.jobs ?? data
+        // backend might return { workers: [...] } or an array directly
+        const list = data?.workers ?? data
         const base = Array.isArray(list) ? list : []
         // if a newWorker was passed via navigation state, prepend it (avoid duplicate by _id or by fields)
         const newWorker = location?.state?.newWorker
@@ -39,8 +39,8 @@ function DisplayWorkers() {
         }
       })
       .catch((err) => {
-        console.error('Error fetching jobs', err)
-        setError(err.message || 'Error fetching jobs')
+        console.error('Error fetching workers', err)
+        setError(err.message || 'Error fetching workers')
       })
       .finally(() => setLoading(false))
 
@@ -92,4 +92,4 @@ function DisplayWorkers() {
   )
 }
 
-export default DisplayJobs
+export default DisplayWorkers
