@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../Navbar/Navbar'
 import axios from 'axios'
-import Card from '../jobs/card'
+import WorkerCard from '../workers/WorkerCard'
 import { Link, useLocation } from 'react-router-dom'
 
 const API_URL = 'http://localhost:5000/api/workers'
@@ -77,9 +77,9 @@ function DisplayWorkers() {
                 <div className="col-12 text-center">No workers found</div>
               )}
               {workers && workers.map((worker, i) => (
-                <Card
+                <WorkerCard
                   key={worker._id ?? i}
-                  job={worker}
+                  worker={worker}
                   onDelete={(deletedId) => setWorkers((prev) => prev.filter((w) => w._id !== deletedId))}
                 />
               ))}

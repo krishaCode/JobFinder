@@ -9,6 +9,7 @@ function Navbar() {
         <ul className="flex-center nav-list">
           <li><Link className="nav-link" to="/">Home</Link></li>
           <li><Link className="nav-link" to="/jobs">Jobs</Link></li>
+          <li><Link className="nav-link" to="/workers">Workers</Link></li>
           <li><Link className="nav-link" to="/postjob">Post Jobs</Link></li>
           <li><Link className="nav-link" to="/postworkers">Post Workers</Link></li>
           <li><Link className="nav-link" to="/about">About</Link></li>
