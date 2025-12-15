@@ -136,9 +136,6 @@ function PostJob() {
                         />
                         <div className="error-message">Please enter a valid location</div>
                     </div>
-                    </div>
-
-                    <div className="form-row two-cols">
                     <div className="form-group">
                         <label htmlFor="company" className="form-label">
                             Company
@@ -154,7 +151,9 @@ function PostJob() {
                         />
                         <div className="error-message">Please enter a valid company</div>
                     </div>
+                </div>
 
+                <div className="form-row two-cols">
                     <div className="form-group">
                         <label htmlFor="salary" className="form-label">
                             Salary
@@ -170,7 +169,6 @@ function PostJob() {
                         />
                         <div className="error-message">Please enter a valid salary</div>
                     </div>
-
                     <div className="form-group">
                         <label htmlFor="postedDate" className="form-label">
                             Post Date
@@ -179,15 +177,12 @@ function PostJob() {
                             type="date" 
                             id="postedDate" 
                             name="postedDate" 
-                            className="form-input" 
-                            placeholder="Job post date"
+                            className="form-input"
                             value={input.postedDate}
                             onChange={handleChange}
                         />
                         <div className="error-message">Please enter a valid post date</div>
                     </div>
-
-                    
                 </div>
 
                 <div className="form-group">
