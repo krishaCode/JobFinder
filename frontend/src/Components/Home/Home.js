@@ -65,42 +65,50 @@ export default function Home() {
       <section className="search-cards-section">
         <div className="container">
           <div className="cards-wrapper">
-            <div className="search-card large">
-              <h2>Appear in front of <span className="text-yellow">100+</span></h2>
-              <h2>companies that open job vacancies every month</h2>
-              
-              <div className="search-form">
-                <div className="tab-buttons">
-                  <button 
-                    className={activeTab === 'job' ? 'active' : ''} 
-                    onClick={() => setActiveTab('job')}
-                  >
-                    <i className="fa-solid fa-circle"></i> Find Job
-                  </button>
-                  <button 
-                    className={activeTab === 'talent' ? 'active' : ''} 
-                    onClick={() => setActiveTab('talent')}
-                  >
-                    Find Talent
-                  </button>
+            {/* Left column stacked cards */}
+            <div className="left-stack">
+              <div className="headline-card">
+                <h2>Appear in front of <span className="text-yellow">100+</span></h2>
+                <h2><span className="text-yellow">companies</span> that open job</h2>
+                <h2>vacancies every month</h2>
+              </div>
+
+              <div className="search-card form-card">
+                <div className="search-form">
+                  <div className="tab-buttons">
+                    <button 
+                      className={activeTab === 'job' ? 'active' : ''} 
+                      onClick={() => setActiveTab('job')}
+                    >
+                      Find Job
+                    </button>
+                    <span className="toggle-pill" aria-hidden="true"></span>
+                    <button 
+                      className={activeTab === 'talent' ? 'active' : ''} 
+                      onClick={() => setActiveTab('talent')}
+                    >
+                      Find Talent
+                    </button>
+                  </div>
+
+                  <input type="text" placeholder="Enter your dream job" className="search-input" />
+                  
+                  <select className="location-select">
+                    <option>Select Your Location</option>
+                    <option>New York</option>
+                    <option>San Francisco</option>
+                    <option>London</option>
+                    <option>Remote</option>
+                  </select>
+
+                  <Link to="/jobs" className="find-job-btn">Find Job</Link>
                 </div>
-
-                <input type="text" placeholder="Enter your dream job..." className="search-input" />
-                
-                <select className="location-select">
-                  <option>Select Your Location</option>
-                  <option>New York</option>
-                  <option>San Francisco</option>
-                  <option>London</option>
-                  <option>Remote</option>
-                </select>
-
-                <Link to="/jobs" className="find-job-btn">Find Job</Link>
               </div>
             </div>
 
+            {/* Right tall info card */}
             <div className="search-card dark">
-              <p>The most updated platform about jobs that are currently available and you can easily get your dream job here.</p>
+              <p>The most updated platform about jobs that are currently open, and you can easily get your dream job here</p>
               <Link to="/jobs" className="learn-more-btn">Learn More</Link>
               <div className="decorative-arc arc-yellow"></div>
               <div className="decorative-arc arc-blue"></div>
