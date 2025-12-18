@@ -120,35 +120,46 @@ export default function Home() {
       {/* Process Steps Section */}
       <section className="process-section">
         <div className="container">
-          <h2>Get your <span className="text-blue">dream job</span> easily with just your gadget</h2>
-          
-          <div className="steps-grid">
-            <div className="step-card">
-              <div className="step-number">01</div>
-              <div className="step-arc"></div>
-              <h3>Complete your Profile</h3>
-              <p>Complete your profile information so recruiters can see all the information about you</p>
-            </div>
+          <div className="process-header">
+            <h2>
+              Get your <span className="text-blue">dream job</span> easily
+              <br /> with just your gadget
+            </h2>
+            <p className="process-desc">
+              Follow these steps to get the job you want. We will help you to find a job
+              that suits your passion
+            </p>
+          </div>
 
-            <div className="step-card">
-              <div className="step-number">02</div>
-              <div className="step-arc"></div>
-              <h3>Directly CV Upload</h3>
-              <p>You can directly upload your CV and portfolio so recruiters are more interested</p>
-            </div>
+          <div className="steps-surface">
+            <div className="steps-grid">
+              <div className="step-card">
+                <div className="step-number">01</div>
+                <div className="step-arc-yellow"></div>
+                <h3>Completed your Profile</h3>
+                <p>Complete your profile so that recruiters can see information of you</p>
+              </div>
 
-            <div className="step-card">
-              <div className="step-number">03</div>
-              <div className="step-arc-white"></div>
-              <h3>Scheduling Interview</h3>
-              <p>You can schedule the time of your interview with the recruiters</p>
-            </div>
+              <div className="step-card">
+                <div className="step-number">02</div>
+                <div className="step-arc-yellow"></div>
+                <h3>Directly CV Upload</h3>
+                <p>You can upload your resume or CV, and Recruiters will review</p>
+              </div>
 
-            <div className="step-card">
-              <div className="step-number">04</div>
-              <div className="step-arc"></div>
-              <h3>Selected Candidates</h3>
-              <p>Every day candidates who pass the interview will receive notification from recruiter</p>
+              <div className="step-card featured floating-card">
+                <div className="step-number">03</div>
+                <div className="step-arc-yellow"></div>
+                <h3>Scheduling Interview</h3>
+                <p>You can schedule your interview with the Recruiters</p>
+              </div>
+
+              <div className="step-card">
+                <div className="step-number">04</div>
+                <div className="step-arc-yellow"></div>
+                <h3>Selected Candidate</h3>
+                <p>Selected candidate can enter the company for interview with recruiter</p>
+              </div>
             </div>
           </div>
         </div>
