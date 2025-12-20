@@ -207,21 +207,10 @@ export default function Home() {
       {/* Final CTA Section */}
       <section className="final-cta">
         <div className="container">
-          <div className="cta-content">
-            <h2>Get Your Dream Jobs Here</h2>
-            <Link to="/postjob" className="signup-btn">Sign Up Now</Link>
-          </div>
-          <div className="decorative-circle circle-yellow-lg"></div>
-          <div className="decorative-circle circle-blue-lg"></div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="home-footer">
-        <div className="container">
+          <div className="container">
           <div className="footer-content">
             <div className="footer-brand">
-              <h3>Jofin</h3>
+              <h3>Job Finder</h3>
               <p>Search and find your dream job now easier than ever. You just need to browse and find it and apply.</p>
               <p className="copyright">© 2025 Jofin. All right reserved</p>
             </div>
@@ -245,7 +234,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </footer>
+          <div className="decorative-circle circle-yellow-lg"></div>
+          <div className="decorative-circle circle-blue-lg"></div>
+        </div>
+      </section>
+
+      
     </div>
   )
 }
