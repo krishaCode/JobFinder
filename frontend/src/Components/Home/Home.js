@@ -27,37 +27,37 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero-container">
         <div className="hero-inner">
-          <div className="hero-text">
+          <div className="hero-headline">
             <h1>
               Platform to <span className="text-blue">find work</span> and also to find <span className="text-yellow">great talent.</span>
             </h1>
           </div>
 
-          <div className="hero-visual">
-            <div className="get-started-badge">
-              <Link to="/jobs" className="badge-btn">
-                Get Started
-                <i className="fa-solid fa-arrow-right"></i>
-              </Link>
+          <div className="hero-media">
+            <div className="get-started-card">
+              <span className="label">Get Started</span>
+              <span className="arrow">↗</span>
             </div>
-            <div className="hero-image">
-              <i className="fa-solid fa-user-tie hero-icon"></i>
-            </div>
-            <div className="info-box">
-              <p>Search and find your dream job now easier than ever, you just need to browse and find it and apply.</p>
-            </div>
-            <div className="circle-yellow"></div>
-            <div className="circle-blue"></div>
-          </div>
-        </div>
 
-        {/* Company Logos */}
-        <div className="company-logos">
-          <div className="logo-item"><i className="fa-brands fa-adobe"></i> <span>Adobe</span></div>
-          <div className="logo-item"><i className="fa-brands fa-figma"></i> <span>Figma</span></div>
-          <div className="logo-item"><i className="fa-brands fa-dribbble"></i> <span>Dribbble</span></div>
-          <div className="logo-item"><i className="fa-brands fa-dropbox"></i> <span>Dropbox</span></div>
-          <div className="logo-item"><i className="fa-brands fa-bitcoin"></i> <span>Coinbase</span></div>
+            <div className="hero-photo">
+              <img src="/imag/banner.jpg" alt="Professional smiling on a call" />
+              <div className="hero-arc hero-arc-left"></div>
+              <div className="hero-arc hero-arc-right"></div>
+            </div>
+
+            <div className="info-card">
+              <p>Search and find your dream job now easier than ever, you can simply browse and find a job if you need it.</p>
+            </div>
+          </div>
+
+          {/* Company Logos */}
+          <div className="company-logos">
+            <div className="logo-item"><i className="fa-brands fa-adobe"></i> <span>Adobe</span></div>
+            <div className="logo-item"><i className="fa-brands fa-figma"></i> <span>Figma</span></div>
+            <div className="logo-item"><i className="fa-brands fa-dribbble"></i> <span>Dribbble</span></div>
+            <div className="logo-item"><i className="fa-brands fa-dropbox"></i> <span>Dropbox</span></div>
+            <div className="logo-item"><i className="fa-brands fa-bitcoin"></i> <span>Coinbase</span></div>
+          </div>
         </div>
       </section>
 
