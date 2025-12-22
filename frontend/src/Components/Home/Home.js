@@ -37,16 +37,18 @@ export default function Home() {
             <div className="get-started-card">
               <span className="label">Get Started</span>
               <span className="arrow">↗</span>
+              <div className="card-arc yellow-arc"></div>
             </div>
 
             <div className="hero-photo">
               <img src="/imag/banner.jpg" alt="Professional smiling on a call" />
-              <div className="hero-arc hero-arc-left"></div>
-              <div className="hero-arc hero-arc-right"></div>
+              <div className="photo-arc yellow-arc-photo"></div>
+              <div className="photo-arc blue-arc-photo"></div>
             </div>
 
             <div className="info-card">
               <p>Search and find your dream job now easier than ever, you can simply browse and find a job if you need it.</p>
+              <div className="card-arc blue-arc"></div>
             </div>
           </div>
 
