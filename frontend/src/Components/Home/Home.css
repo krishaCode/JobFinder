@@ -397,10 +397,12 @@
   background: var(--color-dark);
   color: white;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 28px;
+  padding: 3rem;
 }
 
 .search-card.dark p {
@@ -431,29 +433,31 @@
 
 .decorative-arc {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  border: 30px solid;
+  border: 28px solid;
   border-top-color: transparent;
   border-left-color: transparent;
   transform: rotate(45deg);
+  pointer-events: none;
 }
 
 .arc-yellow {
   border-right-color: var(--color-yellow);
   border-bottom-color: var(--color-yellow);
-  bottom: -100px;
-  right: -50px;
+  bottom: -80px;
+  right: -40px;
 }
 
 .arc-blue {
   border-right-color: var(--color-blue);
   border-bottom-color: var(--color-blue);
-  bottom: -120px;
-  right: -30px;
-  width: 250px;
-  height: 250px;
+  bottom: -100px;
+  right: -20px;
+  width: 220px;
+  height: 220px;
+  border-width: 32px;
 }
 
 /* Process Steps Section */

@@ -109,14 +109,14 @@ export default function Home() {
             </div>
 
             {/* Right tall info card */}
-            <div className="search-card dark">
+            
+        </div><div className="search-card dark">
               <p>The most updated platform about jobs that are currently open, and you can easily get your dream job here</p>
               <Link to="/jobs" className="learn-more-btn">Learn More</Link>
               <div className="decorative-arc arc-yellow"></div>
               <div className="decorative-arc arc-blue"></div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Process Steps Section */}
