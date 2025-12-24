@@ -386,7 +386,7 @@
 .search-card.dark p {
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: auto;
   position: relative;
   z-index: 2;
 }
@@ -399,10 +399,12 @@
   border-radius: 16px;
   text-decoration: none;
   font-weight: 600;
-  align-self: flex-start;
+  align-self: center;
   position: relative;
   z-index: 2;
   transition: transform 0.3s ease;
+  margin-top: auto;
+  margin-bottom: 21rem;
 }
 
 .learn-more-btn:hover {
@@ -422,22 +424,22 @@
   border-color: transparent;
   border-left-color: var(--color-yellow);
   border-bottom-color: var(--color-yellow);
-  bottom: -20px;
-  left: -20px;
-  width: 180px;
-  height: 180px;
-  border-width: 40px;
+  bottom: 10px;
+  left: 10px;
+  width: 160px;
+  height: 160px;
+  border-width: 38px;
 }
 
 .arc-blue {
   border-color: transparent;
   border-right-color: var(--color-blue);
   border-bottom-color: var(--color-blue);
-  bottom: -20px;
-  right: -20px;
-  width: 220px;
-  height: 220px;
-  border-width: 48px;
+  bottom: 10px;
+  right: 10px;
+  width: 200px;
+  height: 200px;
+  border-width: 45px;
 }
 
 /* Process Steps Section */
