@@ -116,6 +116,104 @@
   margin: 0;
 }
 
+/* Team Section */
+.team-section {
+  margin-top: 40px;
+  background: white;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.team-tag {
+  display: inline-block;
+  color: #ff6b35;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.team-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.team-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #e8f0f7;
+  aspect-ratio: 1;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card.featured {
+  position: relative;
+}
+
+.team-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 20px 15px 15px;
+  color: white;
+}
+
+.team-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  color: white;
+}
+
+.team-info p {
+  font-size: 0.85rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.linkedin-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  background: #0077b5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.linkedin-icon:hover {
+  background: #005885;
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
   .main-grid {
@@ -128,6 +226,14 @@
 
   .hero-title {
     font-size: 2rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-title {
+    font-size: 1.6rem;
   }
 }
 
@@ -154,5 +260,17 @@
 
   .stat-number {
     font-size: 2rem;
+  }
+
+  .team-section {
+    padding: 30px 20px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-title {
+    font-size: 1.4rem;
   }
 }
