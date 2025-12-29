@@ -85,6 +85,24 @@ function AboutUs() {
             </div>
           </div>
         </div>
+
+        {/* Vision & Mission Section */}
+        <div className="vision-mission-section">
+          <div className="vision-card">
+            <span className="vm-tag">Our Vision</span>
+            <h2 className="vm-title">Empowering Lives Through Education</h2>
+            <p className="vm-description">
+              Our unwavering vision is to empower lives through accessible, high-quality education. By fostering a global community of lifelong learners, we aim to unlock the full potential of individuals and communities, creating a future for all.
+            </p>
+          </div>
+          <div className="mission-card">
+            <span className="vm-tag">Our Mission</span>
+            <h2 className="vm-title">Learning for All, Everywhere</h2>
+            <p className="vm-description">
+              Our unwavering vision is to empower lives through accessible, high-quality education. By fostering a global community of lifelong learners, we aim to unlock the full potential of individuals and communities, creating a future for all.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
