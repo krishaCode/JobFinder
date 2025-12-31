@@ -57,10 +57,11 @@
 }
 
 .hero-description {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: #4a4a4a;
-  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+  text-align: left;
+  margin: 0;
 }
 
 .hero-image {
@@ -218,12 +219,12 @@
 .vision-mission-section {
   margin-top: 40px;
   background: white;
-  padding: 50px 40px;
+  padding: 10px 40px;
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  gap: 70px;
 }
 
 .vision-card,
