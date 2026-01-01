@@ -13,6 +13,7 @@ function Navbar() {
           <li><Link className="nav-link" to="/postjob">Post Jobs</Link></li>
           <li><Link className="nav-link" to="/postworkers">Post Workers</Link></li>
           <li><Link className="nav-link" to="/about">About</Link></li>
+          <li><Link className="nav-link" to="/contact">Contact Us</Link></li>
         </ul>
       </div>
     </nav>

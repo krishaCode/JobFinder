@@ -7,6 +7,7 @@ import PostWorkers from './Components/PostWorkers/PostWorkers';
 import UpdateJobs from './Components/UpdtaeJobs/UpdateJobs';
 import Home from './Components/Home/Home';
 import AboutUs from './Components/AboutUs/aboutUs';
+import ContactUs from './Components/ContactUs/ContactUs';
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/postworkers" element={<PostWorkers />} />
         <Route path="/updatejobs/:id" element={<UpdateJobs />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </div>
   );
