@@ -106,10 +106,11 @@
             display: block;
             font-weight: 500;
             margin-bottom: 0.5rem;
-            color: var(--text-primary);
+            color: #ffffff !important;
             font-size: 0.9rem;
             letter-spacing: 0.025em;
             transition: color 0.2s ease;
+            opacity: 1 !important;
         }
 
         .form-input, .form-select, .form-textarea {
