@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar'
 import axios from 'axios'
 import WorkerCard from '../workers/WorkerCard'
 import { Link, useLocation } from 'react-router-dom'
+import '../Footer.css'
 
 const API_URL = 'http://localhost:5000/api/workers'
 
@@ -87,7 +88,37 @@ function DisplayWorkers() {
           </div>
         </section>
       </div>
-      
+
+      {/* Footer Section */}
+      <section className="final-cta">
+        <div className="container">
+          <div className="footer-content">
+            <div className="footer-brand">
+              <h3>Job Finder</h3>
+              <p>Search and find your dream job now easier than ever. You just need to browse and find it and apply.</p>
+              <p className="copyright">© 2025 Jofin. All right reserved</p>
+            </div>
+
+            <div className="footer-links">
+              <div className="footer-column">
+                <h4>Quick Links</h4>
+                <Link to="/">Home</Link>
+                <Link to="/about">About Us</Link>
+                <Link to="/jobs">Jobs</Link>
+                <Link to="/contact">Contact</Link>
+              </div>
+
+              <div className="footer-column">
+                <h4>Subscribe to our newsletter</h4>
+                <div className="newsletter-form">
+                  <input type="email" placeholder="Enter your email" />
+                  <button><i className="fa-solid fa-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
