@@ -4,6 +4,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import '../PostJob/PostJob.css'
 import { validatePhone, initPostJobForm } from '../PostJob/script'
 import '../Footer.css'
+import '../GlobalStyles.css'
 
 function PostWorkers() {
     const navigate = useNavigate();
@@ -164,7 +165,9 @@ function PostWorkers() {
                   </div>
                 </div>
               </div>
-            </section>
+            <div className="decorative-circle circle-yellow-lg"></div>
+            <div className="decorative-circle circle-blue-lg"></div>
+          </section>
         </>
     )
 }

@@ -32,6 +32,9 @@
   width: 100%;
   background: var(--color-light-gray);
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -691,6 +694,7 @@
   padding: 5rem 2rem;
   position: relative;
   overflow: hidden;
+  margin-top: auto;
 }
 
 .cta-content {

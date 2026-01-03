@@ -4,6 +4,7 @@ import axios from 'axios'
 import Card from '../jobs/card'
 import { Link, useLocation } from 'react-router-dom'
 import '../Footer.css'
+import '../GlobalStyles.css'
 
 const API_URL = 'http://localhost:5000/api/jobs'
 
@@ -118,6 +119,8 @@ function DisplayJobs() {
             </div>
           </div>
         </div>
+        <div className="decorative-circle circle-yellow-lg"></div>
+        <div className="decorative-circle circle-blue-lg"></div>
       </section>
     </>
   )

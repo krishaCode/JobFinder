@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './aboutUs.css';
 import '../Footer.css';
+import '../GlobalStyles.css';
 
 function AboutUs() {
   return (
@@ -136,6 +137,8 @@ function AboutUs() {
             </div>
           </div>
         </div>
+        <div className="decorative-circle circle-yellow-lg"></div>
+        <div className="decorative-circle circle-blue-lg"></div>
       </section>
     </div>
   );

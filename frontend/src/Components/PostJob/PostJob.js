@@ -5,6 +5,7 @@ import './PostJob.css'
 import { validatePhone, initPostJobForm } from './script'
 import { useEffect } from 'react'
 import '../Footer.css'
+import '../GlobalStyles.css'
 
 function PostJob() {
     const navigate = useNavigate();
@@ -242,6 +243,8 @@ function PostJob() {
             </div>
           </div>
         </div>
+        <div className="decorative-circle circle-yellow-lg"></div>
+        <div className="decorative-circle circle-blue-lg"></div>
       </div>
     </section>
         </>

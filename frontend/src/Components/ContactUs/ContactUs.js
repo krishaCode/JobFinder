@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ContactUs.css';
 import '../Footer.css';
+import '../GlobalStyles.css';
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -238,6 +239,8 @@ export default function ContactUs() {
             </div>
           </div>
         </div>
+        <div className="decorative-circle circle-yellow-lg"></div>
+        <div className="decorative-circle circle-blue-lg"></div>
       </section>
     </div>
   );

@@ -1,7 +1,7 @@
 .contact-container {
   min-height: 100vh;
   padding: 60px 20px;
-  background: #f8f9fa;
+  background: #F5F5F5;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
 
@@ -12,7 +12,7 @@
 
 /* Header Section */
 .contact-header {
-  background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%);
+  background: linear-gradient(135deg, #5865F2 0%, #4752C4 100%);
   border-radius: 20px;
   padding: 40px;
   text-align: center;
@@ -319,7 +319,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0066ff;
+  color: #5865F2;
   flex-shrink: 0;
 }
 

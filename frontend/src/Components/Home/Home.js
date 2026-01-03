@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import './Home.css'
+import '../GlobalStyles.css'
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('job')
