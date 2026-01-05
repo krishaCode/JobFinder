@@ -67,7 +67,7 @@ function PostJob() {
         }, [])
 
     return (
-        <>
+        <div className="page-wrapper-postjob">
 
             <div className="floating-elements">
         <div className="floating-circle circle-1"></div>
@@ -247,7 +247,7 @@ function PostJob() {
         <div className="decorative-circle circle-blue-lg"></div>
       </div>
     </section>
-        </>
+        </div>
     )
 }
 

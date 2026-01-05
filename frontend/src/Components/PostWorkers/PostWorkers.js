@@ -60,7 +60,7 @@ function PostWorkers() {
     }, [])
 
     return (
-        <>
+        <div className="page-wrapper-postjob">
             <div className="floating-elements">
                 <div className="floating-circle circle-1"></div>
                 <div className="floating-circle circle-2"></div>
@@ -168,7 +168,7 @@ function PostWorkers() {
             <div className="decorative-circle circle-yellow-lg"></div>
             <div className="decorative-circle circle-blue-lg"></div>
           </section>
-        </>
+        </div>
     )
 }
 
