@@ -39,7 +39,7 @@
 
         .container {
             width: 950px;
-            margin: 0 auto;
+            margin: 0 auto 4rem auto;
             position: relative;
             flex: 1;
         }
