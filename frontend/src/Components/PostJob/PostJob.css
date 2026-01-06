@@ -39,7 +39,7 @@
 
         .container {
             width: 950px;
-            margin: 0 auto 4rem auto;
+            margin: 0 auto 6rem auto;
             position: relative;
             flex: 1;
         }
@@ -323,6 +323,11 @@
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             33% { transform: translateY(-20px) rotate(120deg); }
             66% { transform: translateY(10px) rotate(240deg); }
+        }
+
+        .page-wrapper-postjob .final-cta {
+            margin-top: 6rem;
+            padding-top: 4rem;
         }
 
         @media (max-width: 640px) {
