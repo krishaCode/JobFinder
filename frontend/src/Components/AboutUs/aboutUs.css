@@ -170,6 +170,7 @@
   background: #e8f0f7;
   aspect-ratio: 1;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .team-card:hover {
@@ -182,18 +183,24 @@
   object-fit: cover;
 }
 
-.team-card.featured {
-  position: relative;
-}
-
 .team-info {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.7));
   padding: 20px 15px 15px;
   color: white;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-card:hover .team-info {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .team-info h3 {
@@ -201,12 +208,38 @@
   font-weight: 600;
   margin: 0 0 5px 0;
   color: white;
+  animation: fadeInUp 0.6s ease-out 0.1s both;
 }
 
 .team-info p {
   font-size: 0.85rem;
   margin: 0;
   color: rgba(255, 255, 255, 0.9);
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.team-card:hover .team-info h3,
+.team-card:hover .team-info p {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.team-card:hover .team-info h3 {
+  animation-delay: 0.1s;
+}
+
+.team-card:hover .team-info p {
+  animation-delay: 0.2s;
 }
 
 .linkedin-icon {
@@ -220,11 +253,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+}
+
+.team-card:hover .linkedin-icon {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  animation: fadeInScale 0.4s ease-out 0.3s both;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotate(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
 }
 
 .linkedin-icon:hover {
   background: #005885;
+  transform: scale(1.1);
 }
 
 /* Vision & Mission Section */
